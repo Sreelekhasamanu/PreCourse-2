@@ -1,3 +1,7 @@
+// Time Complexity : O(N), Since we are traversing the whole list
+// Space Complexity : O(1), Since Constant extra space is used
+// Did this code successfully run on Leetcode : Yes
+// Any problem you faced while coding this : N/A
 class LinkedList 
 { 
     Node head; // head of linked list 
@@ -20,6 +24,19 @@ class LinkedList
     { 
         //Write your code here
 	//Implement using Fast and slow pointers
+    Node fastPointer = head;
+    Node slowPointer = head;
+
+    // Moving the Fast pointer double the times of slow pointer.
+    // By the time Fast pointer reaches the end,
+    // Slow pointer will be at the half of the point
+    // There by Reaching the middle element and printing the data of the middle node
+    while (fastPointer != null && fastPointer.next != null) {
+        fastPointer = fastPointer.next.next;
+        slowPointer = slowPointer.next;
+    }
+    System.out.print("Middle Element => " + slowPointer.data);
+
     } 
   
     public void push(int new_data) 
