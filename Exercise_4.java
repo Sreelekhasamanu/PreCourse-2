@@ -10,7 +10,7 @@ class MergeSort
     void merge(int arr[], int l, int m, int r) 
     {  
        //Your code here  
-       int n1 = m - l + 1;
+       int n1 = m - l + 1; //done
        int n2 = r - m;
 
        // Creating Temp Array
